@@ -1,0 +1,49 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #1a0b2e; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  }
+  
+  .capa-livro {
+    background-color: #3b1c61; 
+    color: white; 
+    padding: 50px;
+    border-radius: 15px; 
+    text-align: center;
+    
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); 
+    border: 2px solid #00ff88; 
+  }
+  
+  h1 {
+    margin-bottom: 30px; 
+  }
+  
+  .btn-abrir {
+    background-color: #00ff88; 
+    color: #1a0b2e; 
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer; 
+    border-radius: 8px;
+    transition: all 0.3s ease; 
+  }
+  
+  
+  .btn-abrir:hover {
+    background-color: #00cc6a; 
+    transform: scale(1.1); 
+    box-shadow: 0 0 20px #00ff88; 
+  }
