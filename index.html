@@ -1,59 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-  <title>livro legal</title>
-  
-  
-  <style>
-    body {
-      background-color: #fdf5e6; 
-      display: flex;
-      justify-content: center; 
-      margin-top: 100px;
-    }
-    .capa-livro {
-      background-color: #2b1f18; 
-      color: white; 
-      padding: 40px;
-      border-radius: 10px; 
-      text-align: center;
-    }
-    .btn-abrir {
-      background-color: #dcb37b; 
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer; 
-      border-radius: 5px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uriband - Produção Musical</title>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  
-  <div id="tela-capa" class="capa-container">
-    <div class="capa-livro">
-      <h1>Os livro legal hehehe</h1>
-      <button class="btn-abrir">Abrir Livro</button>
+
+    <!-- TELA CENTRAL: LOGIN -->
+    <div id="screen-login" class="screen active">
+        <div class="login-center">
+            <h2 class="title-underline">começe sua banda<br><span class="subtitle">uriband</span></h2>
+            <input type="text" placeholder="usarname do artista">
+            <input type="password" placeholder="senha do artista">
+            <button class="btn" id="btn-login-start">Comece!</button>
+            <div class="login-actions">
+                <button class="btn" id="btn-go-signup">comece sua arte</button>
+                <button class="btn btn-red" id="btn-go-forgot">esqueci a senhaa</button>
+            </div>
+        </div>
     </div>
-  </div>
-</body>
-</html>
 
+    <!-- TELA ESQUERDA: CADASTRO -->
+    <div id="screen-signup" class="screen hidden">
+        <button class="btn-back" id="btn-back-from-signup">&larr; Voltar</button>
+        <div class="content-flex">
+            <div class="form-side">
+                <input type="email" placeholder="email do artista">
+                <input type="password" placeholder="senha do artista">
+                <input type="password" placeholder="confirme senha">
+                <button class="btn" id="btn-create-account">criar conta</button>
+            </div>
+            <div class="piano-circle">
+                <div class="piano-keys">
+                    <div class="black-key" style="left: 15px;"></div>
+                    <div class="black-key" style="left: 42px;"></div>
+                    <div class="white-key"></div>
+                    <div class="white-key"></div>
+                    <div class="white-key"></div>
+                    <div class="white-key"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Meu Primeiro Site</title>
-  
-  <!-- Essa linha aqui é a "ponte" que liga o HTML ao seu arquivo style.css -->
-  <link rel="stylesheet" href="style.css">
+    <!-- TELA DIREITA: ESQUECI A SENHA (ATUALIZADA) -->
+    <div id="screen-forgot" class="screen hidden">
+        <button class="btn-back" id="btn-back-from-forgot">&larr; Voltar</button>
+        
+        <!-- Passo 1: Digitar o e-mail -->
+        <div class="center-content" id="forgot-step-1">
+            <h2 class="title-underline">recuperar senha</h2>
+            <input type="email" id="forgot-email-input" placeholder="email do artista">
+            <button class="btn" id="btn-send-email">Enviar</button>
+        </div>
 
-</head>
-<body>
-  
-  
+        <!-- Passo 2: Mensagem de confirmação (Escondida inicialmente) -->
+        <div class="center-content hidden" id="forgot-step-2">
+            <h2 class="title-underline">olhe a caixa do email para mais informaçoes</h2>
+        </div>
+    </div>
 
+    <!-- TELA INFERIOR ESQUERDA: SUCESSO -->
+    <div id="screen-success" class="screen hidden">
+        <div class="center-content success-layout">
+            <h2 class="title-underline">Parabens,sua conta foi criada</h2>
+            <button class="btn" id="btn-start-producing">Comece a produzir!</button>
+        </div>
+    </div>
+
+    <!-- TELA INFERIOR DIREITA: PAINEL/DASHBOARD -->
+    <div id="screen-dashboard" class="screen hidden dashboard-layout">
+        <button class="btn-back" id="btn-logout">Sair / Logout</button>
+        <div class="dashboard-menu">
+            <button class="btn btn-menu">GRAVAR VOZ</button>
+            <button class="btn btn-menu">INSTRUMENTOS DIGITAIS</button>
+            <button class="btn btn-menu">SAMPLER</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

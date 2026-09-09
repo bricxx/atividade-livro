@@ -1,49 +1,194 @@
-
+/* Configurações Globais */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: #1a0b2e; 
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 100vh; 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-  }
-  
-  .capa-livro {
-    background-color: #3b1c61; 
-    color: white; 
-    padding: 50px;
-    border-radius: 15px; 
-    text-align: center;
-    
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); 
-    border: 2px solid #00ff88; 
-  }
-  
-  h1 {
-    margin-bottom: 30px; 
-  }
-  
-  .btn-abrir {
-    background-color: #00ff88; 
-    color: #1a0b2e; 
-    border: none;
-    padding: 15px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer; 
-    border-radius: 8px;
-    transition: all 0.3s ease; 
-  }
-  
-  
-  .btn-abrir:hover {
-    background-color: #00cc6a; 
-    transform: scale(1.1); 
-    box-shadow: 0 0 20px #00ff88; 
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Architects Daughter', cursive, sans-serif;
+}
+
+body {
+  background-color: #1a1a1a; 
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Telas (Screens) simulando os blocos do seu rascunho */
+.screen {
+  width: 650px;
+  height: 380px;
+  background-color: #1e1e1e; 
+  border-radius: 20px;
+  padding: 40px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+  display: none; 
+}
+
+/* Mostra apenas a tela que tem a classe 'active' */
+.screen.active {
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Textos e Títulos */
+.title-underline {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 25px;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: normal;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+/* Inputs */
+input {
+  background: transparent;
+  border: 2px solid #2ecc71; 
+  border-radius: 12px;
+  padding: 8px 15px;
+  color: #2ecc71;
+  margin-bottom: 12px;
+  width: 260px;
+  outline: none;
+  font-size: 16px;
+}
+
+input::placeholder {
+  color: #2ecc71;
+  opacity: 0.8;
+}
+
+/* Botões (Efeito de hover removido) */
+.btn {
+  background: transparent;
+  border: 2px solid #2ecc71;
+  color: #2ecc71;
+  padding: 8px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.btn-red {
+  border-color: #e74c3c; 
+  color: #e74c3c;
+}
+
+.btn-back {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Layout específico das telas */
+.login-center, .center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.login-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Layout Tela Cadastro */
+.content-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.form-side {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Desenho do Piano */
+.piano-circle {
+  width: 160px;
+  height: 160px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-right: 30px;
+}
+
+.piano-keys {
+  display: flex;
+  width: 110px;
+  height: 90px;
+  background: #000;
+  position: relative;
+}
+
+.white-key {
+  width: 25%;
+  height: 100%;
+  background: #fff;
+  border: 1px solid #333;
+  border-radius: 0 0 4px 4px;
+}
+
+.black-key {
+  position: absolute;
+  width: 12px;
+  height: 55px;
+  background: #000;
+  z-index: 2;
+  border-radius: 0 0 3px 3px;
+}
+
+/* Tela de Sucesso */
+.success-layout {
+  justify-content: space-evenly;
+}
+
+/* Tela Painel / Dashboard */
+.dashboard-layout {
+  border: 3px solid #2ecc71; 
+  align-items: flex-start;
+}
+
+.dashboard-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.btn-menu {
+  width: fit-content;
+  padding: 10px 25px;
+}
