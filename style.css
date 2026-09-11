@@ -1,4 +1,4 @@
-/* Configurações Globais */
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +16,7 @@ body {
   overflow: hidden;
 }
 
-/* Telas (Screens) simulando os blocos do seu rascunho */
+
 .screen {
   width: 650px;
   height: 380px;
@@ -28,7 +28,7 @@ body {
   display: none; 
 }
 
-/* Mostra apenas a tela que tem a classe 'active' */
+
 .screen.active {
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@ body {
   display: none !important;
 }
 
-/* Textos e Títulos */
+
 .title-underline {
   text-align: center;
   font-size: 24px;
@@ -55,7 +55,7 @@ body {
   margin-top: 5px;
 }
 
-/* Inputs */
+
 input {
   background: transparent;
   border: 2px solid #2ecc71; 
@@ -73,7 +73,7 @@ input::placeholder {
   opacity: 0.8;
 }
 
-/* Botões (Efeito de hover removido) */
+
 .btn {
   background: transparent;
   border: 2px solid #2ecc71;
@@ -102,7 +102,7 @@ input::placeholder {
   font-size: 14px;
 }
 
-/* Layout específico das telas */
+
 .login-center, .center-content {
   display: flex;
   flex-direction: column;
@@ -118,7 +118,7 @@ input::placeholder {
   margin-top: 20px;
 }
 
-/* Layout Tela Cadastro */
+
 .content-flex {
   display: flex;
   justify-content: space-between;
@@ -132,7 +132,7 @@ input::placeholder {
   flex-direction: column;
 }
 
-/* Desenho do Piano */
+
 .piano-circle {
   width: 160px;
   height: 160px;
@@ -170,12 +170,12 @@ input::placeholder {
   border-radius: 0 0 3px 3px;
 }
 
-/* Tela de Sucesso */
+
 .success-layout {
   justify-content: space-evenly;
 }
 
-/* Tela Painel / Dashboard */
+
 .dashboard-layout {
   border: 3px solid #2ecc71; 
   align-items: flex-start;
